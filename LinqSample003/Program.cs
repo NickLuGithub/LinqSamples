@@ -34,18 +34,31 @@ namespace LinqSample003
             //    Console.WriteLine($"找到 : {person.Name} - {person.Age}");
             //}
 
-            int index = 1;
-            var list = CreateList();
-            // 這裡的 person 是單個物件, 也就是 MyData person
+            //int index = 1;
+            //var list = CreateList();
+            //// 這裡的 person 是單個物件, 也就是 MyData person
 
-            var person = list.ElementAtOrDefault(index);
-            if (person == null)
+            //var person = list.ElementAtOrDefault(index);
+            //if (person == null)
+            //{
+            //    Console.WriteLine("查無此人");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"找到索引為 : {index} 的人為 {person.Name} - {person.Age}");
+            //}
+
+            var list = CreateList();
+            string name = "David";
+            bool result = list.Any(x => x.Name == name);
+            
+            if(result)
             {
-                Console.WriteLine("查無此人");
+                Console.WriteLine($"找到了 : {name}");
             }
             else
             {
-                Console.WriteLine($"找到索引為 : {index} 的人為 {person.Name} - {person.Age}");
+                Console.WriteLine($"找不到 : {name}");
             }
 
             Console.ReadLine();
