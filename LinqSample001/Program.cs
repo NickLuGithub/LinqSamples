@@ -15,10 +15,10 @@ namespace LinqSample001
             // 凡是有 IEnumerable 都可以 foreach
             // Query Expression
 
-            IEnumerable<MyData> people =
-                from data in list
-                where data.Name == "Bill"
-                select data;
+            //IEnumerable<MyData> people =
+            //    from data in list
+            //    where data.Name == "Bill"
+            //    select data;
 
             /*
             var 宣告
@@ -33,6 +33,10 @@ namespace LinqSample001
             //    where data.Name == "Bill"
             //    select data;
 
+            // Method Expresstion
+            var people = list.Where((x) => x.Name == "Bill");
+
+            // 顯示結果
             foreach (MyData person in people) 
             {
                 Console.WriteLine($"{person.Name} 是 {person.Age} 歲");
