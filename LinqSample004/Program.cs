@@ -43,11 +43,11 @@ namespace LinqSample004
             Display(resultOFSkip);
 
             var resultOFTake = list.Take(3);
-            Console.WriteLine("\nSkip(3) 的結果");
+            Console.WriteLine("\nTake(3) 的結果");
             Display(resultOFTake);
 
-            var resultOFSkipTake = list.Skip(2).Take(2);
-            Console.WriteLine("\nSkip(3) 的結果");
+            var resultOFSkipTake = list.Except( list.Skip(list.Count()-3));
+            Console.WriteLine("\nSkip(2).Take(2) 的結果");
             Display(resultOFSkipTake);
 
             Console.ReadLine();
