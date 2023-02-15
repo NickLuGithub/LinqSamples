@@ -29,13 +29,33 @@ namespace LinqSample004
             //Console.WriteLine($"\nB 差集 A 結果");
             //foreach (var item in bEXa) Console.Write(item);
 
-            var list = new List<string> { "台北", "台北", "洛杉磯", "紐約", "紐約", "台北" };
-            var result = list.Distinct();
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+            //var list = new List<string> { "台北", "台北", "洛杉磯", "紐約", "紐約", "台北" };
+            //var result = list.Distinct();
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            var list = new List<string> { "A", "B", "C", "D", "E", "F", "F" };
+            
+            var resultOFSkip = list.Skip(3);
+            Console.WriteLine("Skip(3) 的結果");
+            Display(resultOFSkip);
+
+            var resultOFTake = list.Take(3);
+            Console.WriteLine("\nSkip(3) 的結果");
+            Display(resultOFTake);
+
+            var resultOFSkipTake = list.Skip(2).Take(2);
+            Console.WriteLine("\nSkip(3) 的結果");
+            Display(resultOFSkipTake);
+
             Console.ReadLine();
+        }
+
+        static void Display(IEnumerable<string> source)
+        {
+            foreach(var item in source) { Console.Write($"{item}, "); }
         }
     }
 }
