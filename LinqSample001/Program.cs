@@ -36,6 +36,8 @@ namespace LinqSample001
             // Method Expresstion
             var people = list.Where((x) => x.Name == "Bill");
 
+            // var people = Enumerable.Where(list, (x) => x.Name == "Bill");
+
             // 顯示結果
             foreach (MyData person in people) 
             {
