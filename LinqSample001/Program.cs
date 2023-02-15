@@ -15,6 +15,11 @@ namespace LinqSample001
             // 凡是有 IEnumerable 都可以 foreach
             // Query Expression
 
+            IEnumerable<MyData> people =
+                from data in list
+                where data.Name == "Bill"
+                select data;
+
             /*
             var 宣告
              -- 強型別
@@ -23,10 +28,10 @@ namespace LinqSample001
              -- 只能做為宣告區域變數使用
             */
 
-            IEnumerable<MyData> people =
-                from data in list
-                where data.Name == "Bill"
-                select data;
+            //var people =
+            //    from data in list
+            //    where data.Name == "Bill"
+            //    select data;
 
             foreach (MyData person in people) 
             {
