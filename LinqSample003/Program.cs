@@ -83,25 +83,34 @@ namespace LinqSample003
             //}
 
             // 運算
+            //var list = CreateList();
+            //int total = list.Sum((x) => x.Age);
+            //Console.WriteLine($"年齡的總和為: {total}");
+
+            //var minAge = list.Min(x => x.Age);
+            //Console.WriteLine($"最小年齡為: {minAge}");
+
+            //var maxAge = list.Max(x => x.Age);
+            //Console.WriteLine($"最大年齡為: {maxAge}");
+
+            //int count = list.Count();
+            //Console.WriteLine($"List 總數: {count}");
+
+            //int countOfBill = list.Count((x) => (x.Name == "Bill"));
+            //Console.WriteLine($"List 中有幾個 Bill: {countOfBill}");
+
+            //var average = list.Average((x) => x.Age);
+            //Console.WriteLine($"平均年齡: {average}");
+
             var list = CreateList();
-            int total = list.Sum((x) => x.Age);
-            Console.WriteLine($"年齡的總和為: {total}");
+            var min = list.Where(x => x.Name == "Bill").Min(x => x.Age);
+            Console.WriteLine(min);
 
-            var minAge = list.Min(x => x.Age);
-            Console.WriteLine($"最小年齡為: {minAge}");
+            var total = list.Where(x => x.Name == "Bill").Sum(x => x.Age);
+            Console.WriteLine(total);
 
-            var maxAge = list.Max(x => x.Age);
-            Console.WriteLine($"最大年齡為: {maxAge}");
-
-            int count = list.Count();
-            Console.WriteLine($"List 總數: {count}");
-
-            int countOfBill = list.Count((x) => (x.Name == "Bill"));
-            Console.WriteLine($"List 中有幾個 Bill: {countOfBill}");
-
-            var average = list.Average((x) => x.Age);
-            Console.WriteLine($"平均年齡: {average}");
-
+            var average = list.Where(x => x.Name == "Bill").Average(x => x.Age);
+            Console.WriteLine(average);
 
             Console.ReadLine();
         }
