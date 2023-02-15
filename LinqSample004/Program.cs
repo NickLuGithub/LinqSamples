@@ -21,6 +21,14 @@ namespace LinqSample004
             Console.WriteLine($"\n交集結果");
             foreach (var item in intersect) Console.Write(item);
 
+            var aEXb = list1.Except(list2);
+            Console.WriteLine($"\nA 差集 B 結果");
+            foreach (var item in aEXb) Console.Write(item);
+
+            var bEXa = list2.Except(list1);
+            Console.WriteLine($"\nB 差集 A 結果");
+            foreach (var item in bEXa) Console.Write(item);
+
             Console.ReadLine();
         }
     }
