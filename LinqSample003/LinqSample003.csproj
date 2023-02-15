@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD92136A-FD00-4B94-9270-18A2BAA380DE}</ProjectGuid>
+    <ProjectGuid>{604864AB-773E-4DE8-9B60-2D6279389FD0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LinqSample002</RootNamespace>
-    <AssemblyName>LinqSample002</AssemblyName>
+    <RootNamespace>LinqSample003</RootNamespace>
+    <AssemblyName>LinqSample003</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinqSample002
+namespace LinqSample003
 {
     internal class MyData
     {
