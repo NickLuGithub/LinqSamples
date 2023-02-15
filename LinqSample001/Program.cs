@@ -34,15 +34,21 @@ namespace LinqSample001
             //    select data;
 
             // Method Expresstion
-            var people = list.Where((x) => x.Name == "Bill");
+            //var people = list.Where((x) => x.Name == "Bill");
+            //var people = list.Where((x) => x.Name == "Bill").Select(x => x.Name);
 
             // var people = Enumerable.Where(list, (x) => x.Name == "Bill");
 
             // 顯示結果
-            foreach (MyData person in people) 
-            {
-                Console.WriteLine($"{person.Name} 是 {person.Age} 歲");
-            }
+            //foreach (MyData person in people) 
+            //{
+            //    Console.WriteLine($"{person.Name} 是 {person.Age} 歲");
+            //}
+
+            // -----------------------------------------------------------------------------------
+
+            // First
+
 
             Console.ReadLine();
         }
