@@ -61,6 +61,27 @@ namespace LinqSample003
                 Console.WriteLine($"找不到 : {name}");
             }
 
+            name = "Bill";
+            bool isAllBill = list.All((x) => x.Name == name);
+            if (isAllBill)
+            {
+                Console.WriteLine($"全都是 {name}");
+            }
+            else
+            {
+                Console.WriteLine($"有些人不叫 {name}");
+            }
+
+            bool isAllOverForty = list.All((x) => x.Age >= 40);
+            if (isAllOverForty)
+            {
+                Console.WriteLine("大家都超過 40 歲");
+            }
+            else
+            {
+                Console.WriteLine("有人不到 40 歲");
+            }
+
             Console.ReadLine();
         }
 
