@@ -104,13 +104,13 @@ namespace LinqSample003
 
             var list = CreateList();
             var min = list.Where(x => x.Name == "Bill").Min(x => x.Age);
-            Console.WriteLine(min);
+            Console.WriteLine($"所有 Bill 中最小的年齡是 : {min}");
 
             var total = list.Where(x => x.Name == "Bill").Sum(x => x.Age);
-            Console.WriteLine(total);
+            Console.WriteLine($"所有 Bill 中年齡總和是 : {total}");
 
             var average = list.Where(x => x.Name == "Bill").Average(x => x.Age);
-            Console.WriteLine(average);
+            Console.WriteLine($"所有 Bill 中年齡平均是 : {average}");
 
             Console.ReadLine();
         }
