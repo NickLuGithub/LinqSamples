@@ -11,6 +11,19 @@ namespace LinqSample001
         static void Main(string[] args)
         {
             List<MyData> list = CreateList();
+
+            // 凡是有 IEnumerable 都可以 foreach
+            IEnumerable<MyData> people =
+                from data in list
+                where data.Name == "Bill"
+                select data;
+
+            foreach (MyData person in people) 
+            {
+                Console.WriteLine($"{person.Name} 是 {person.Age} 歲");
+            }
+
+            Console.ReadLine();
         }
 
         static List<MyData> CreateList()
