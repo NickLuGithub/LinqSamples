@@ -21,19 +21,32 @@ namespace LinqSample003
             //var person2 = list.Single((x) => x.Name == "Bill");
             //Console.WriteLine($"找到唯一的 : {person2.Name} - {person2.Age}");
 
+            //var list = CreateList();
+            //var person = list.FirstOrDefault((x) => x.Name == "李小龍");
+            //// 判斷回傳結果是否為 null
+            //if (person == null)
+            //{
+            //    //如果是 null 則另行處理
+            //    Console.WriteLine("查無此人");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"找到 : {person.Name} - {person.Age}");
+            //}
+
+            int index = 1;
             var list = CreateList();
-            var person = list.FirstOrDefault((x) => x.Name == "李小龍");
-            // 判斷回傳結果是否為 null
+            // 這裡的 person 是單個物件, 也就是 MyData person
+
+            var person = list.ElementAtOrDefault(index);
             if (person == null)
             {
-                //如果是 null 則另行處理
                 Console.WriteLine("查無此人");
             }
             else
             {
-                Console.WriteLine($"找到 : {person.Name} - {person.Age}");
+                Console.WriteLine($"找到索引為 : {index} 的人為 {person.Name} - {person.Age}");
             }
-
 
             Console.ReadLine();
         }
