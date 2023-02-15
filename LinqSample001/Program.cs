@@ -13,6 +13,16 @@ namespace LinqSample001
             List<MyData> list = CreateList();
 
             // 凡是有 IEnumerable 都可以 foreach
+            // Query Expression
+            
+            /*
+            var 宣告
+             強型別
+             隱含型別(所以這是個語法糖)
+             或稱右(後)決議型別
+             只能做為宣告區域變數使用
+            */
+
             IEnumerable<MyData> people =
                 from data in list
                 where data.Name == "Bill"
