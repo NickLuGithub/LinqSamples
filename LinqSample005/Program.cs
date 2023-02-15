@@ -14,6 +14,8 @@ namespace LinqSample005
             var result1 = list.Where((x) => x.Age > 40).ToList();
             var result2 = list.Where((x) => x.Age > 40).ToArray();
 
+            var myR = list.Where(x => x.Age > 40).ToDictionary(x => x.Name);
+
             // 使用 Name 當群組分類的索引鍵，而值資料仍然是 MyData
             var result3 = list.Where((x) => x.Age > 40).ToDictionary((x) => x.Name);
             foreach (var item in result3)
