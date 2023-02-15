@@ -10,7 +10,7 @@ namespace LinqSample001
     {
         public string Name
         { get; set; }
-        public string Age
+        public int Age
         { get; set; }
     }
 }
