@@ -51,7 +51,7 @@ namespace LinqSample003
             //var list = CreateList();
             //string name = "David";
             //bool result = list.Any(x => x.Name == name);
-            
+
             //if(result)
             //{
             //    Console.WriteLine($"找到了 : {name}");
@@ -83,6 +83,25 @@ namespace LinqSample003
             //}
 
             // 運算
+            var list = CreateList();
+            int total = list.Sum((x) => x.Age);
+            Console.WriteLine($"年齡的總和為: {total}");
+
+            var minAge = list.Min(x => x.Age);
+            Console.WriteLine($"最小年齡為: {minAge}");
+
+            var maxAge = list.Max(x => x.Age);
+            Console.WriteLine($"最大年齡為: {maxAge}");
+
+            int count = list.Count();
+            Console.WriteLine($"List 總數: {count}");
+
+            int countOfBill = list.Count((x) => (x.Name == "Bill"));
+            Console.WriteLine($"List 中有幾個 Bill: {countOfBill}");
+
+            var average = list.Average((x) => x.Age);
+            Console.WriteLine($"平均年齡: {average}");
+
 
             Console.ReadLine();
         }
