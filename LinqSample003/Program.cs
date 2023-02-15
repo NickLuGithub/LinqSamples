@@ -11,15 +11,29 @@ namespace LinqSample003
     {
         static void Main(string[] args)
         {
+            //var list = CreateList();
+
+            //// 這裡的 person1 是單個物件, 也就是 MyData person1
+            //var person1 = list.SingleOrDefault((x) => x.Name == "Tom");
+            //Console.WriteLine($"找到唯一的 : {person1.Name} - {person1.Age}");
+
+            //// 因為找不到唯一 (裡面有兩個 Bill) 就會跳出例外
+            //var person2 = list.Single((x) => x.Name == "Bill");
+            //Console.WriteLine($"找到唯一的 : {person2.Name} - {person2.Age}");
+
             var list = CreateList();
-            
-            // 這裡的 person1 是單個物件, 也就是 MyData person1
-            var person1 = list.SingleOrDefault((x) => x.Name == "Tom");
-            Console.WriteLine($"找到唯一的 : {person1.Name} - {person1.Age}");
-            
-            // 因為找不到唯一 (裡面有兩個 Bill) 就會跳出例外
-            var person2 = list.Single((x) => x.Name == "Bill");
-            Console.WriteLine($"找到唯一的 : {person2.Name} - {person2.Age}");
+            var person = list.FirstOrDefault((x) => x.Name == "李小龍");
+            // 判斷回傳結果是否為 null
+            if (person == null)
+            {
+                //如果是 null 則另行處理
+                Console.WriteLine("查無此人");
+            }
+            else
+            {
+                Console.WriteLine($"找到 : {person.Name} - {person.Age}");
+            }
+
 
             Console.ReadLine();
         }
